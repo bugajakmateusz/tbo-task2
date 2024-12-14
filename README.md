@@ -37,3 +37,18 @@ Niektóre klucze zostały powielone (deployment.key i deployment2.key).
 
 Wszystkie wystąpienia nie wydają się
 false-positive'ami. https://github.com/bugajakmateusz/tbo-task2/commit/fd6740006a794a1a8bb0cd7d8a2a6ee95d8cbec3#diff-a3b0fe5dcfc963cf45af52a02d6e4e63cb48a15f63a7652f12291405e4cde7a0
+
+## Zadanie 3 - weryfikacja bezpieczeństwa bibliotek OpenSource wykorzystywanych w projekcie
+
+**Cel:** Uruchomienie weryfikacji bezpieczeństwa bibliotek OpenSource, które są wykorzystywane w projekcie w celu oceny
+bezpieczeństwa badanej aplikacji.
+
+W aplikacji znaleziono 8 podatności.
+
+![ex3.png](images/ex3.png)
+
+Tabelka przedstawia podsumowanie najpoważniejszej podatności.
+
+| Podatność     | Biblioteka | Krytyczność | Base Score | Wymagany warunek do wykorzystania | Wykorzystanie w aplikacji | Prawdopodobieństwo wykorzystania |
+|---------------|------------|-------------|------------|-----------------------------------|---------------------------|----------------------------------|
+| CVE-2019-8341 | Jinja2     | Krytyczna   | 9.8        | Uruchomienie metody `from_string` | Nie                       | Minimalne                        |
