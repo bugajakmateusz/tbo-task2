@@ -16,3 +16,24 @@ Analizując logi aplikacji Python, zauważono dane wrażliwe w postaci danych do
 Zabezpieczono aplikację, anonimizując logi poprzez modyfikację pliku customers/models.py
 
 ![ex1_log_secure.png](images/ex1_log_secure.png)
+
+## Zadanie 2 - weryfikacja wycieku sekretów
+
+**Cel:** Celem zadania jest weryfikacja, czy w repozytorium (i jego historii) znajdują się sekrety i/lub hasła, które
+zostały `hardcodowane` w kodzie źródłowym lub jednym z plików w przestrzeni dyskowej
+
+### Znalezione sekrety i hasła:
+
+W aplikacjach znaleziono 4 klucze, w plikach
+
+- deployment.key
+- deployment2.key
+- awscredentials.json
+- awscredentials.json
+
+Niektóre klucze zostały powielone (deployment.key i deployment2.key).
+
+![ex2.png](images/ex2.png)
+
+Wszystkie wystąpienia nie wydają się
+false-positive'ami. https://github.com/bugajakmateusz/tbo-task2/commit/fd6740006a794a1a8bb0cd7d8a2a6ee95d8cbec3#diff-a3b0fe5dcfc963cf45af52a02d6e4e63cb48a15f63a7652f12291405e4cde7a0
